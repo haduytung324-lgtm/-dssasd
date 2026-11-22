@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#007aff">
+<title>Thông Báo Ngừng Cấp Điện</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAENklEQVR4nO3d0W3bShCGUekiHaUTlxM/u510kpqUB14EhsxfJpdLaZY8pwCHsT/PrGhBvF5+3S4w579XXwB1iYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkThWuL1dX30JTyUOInGsc6rhIY4Vrr/P9UE34iASx2rn2SziIBLHOtOx4yTDQxxE4iASR6O+m+X20fGLdfPj1RdwdjWzmIhjtevvW5exUTmLiTja3d6ubfdM62cxEcdTjZLFRBybLB8eY2UxEUeLVceOEbOYiGNH42YxEcdWs5tl9Cwm4ujsGFlMxNHNq7L49+9e3zt/ZbfPG31eJbe3a4WBcfvoHKg4jqZjH+JodP8z+FPoHR69+hDHat2n90bX95nTRpcrdCBd4f47/vNWZ2BMfThzvMCiaVEglM8jZHsoJsc3Sm2QJzM5ompni4U6Dg9xzGjPosBmufS7G1Z0rQzzK1vpTDpry/1Tk6O3qq00jENxHFOaE6v6EMcp3J1SFyYijs1+fnmbYI3Ncjc8Zm+kPiaOU/h6LF0yPMRxOsv7EMc+amyWbz3uQxxHlu6WLjx8iKOHr2fSS/XhsWS5FL1DOobaP/7txNHP7Pwo7Pr+/9i4fcwvGmtlg9FqWEsc/ZTcMlv+gi+ObQYfHo+Ppc4ca5ScDfsRxxrp3RuDz4/EWulh5InyYLOIY6WDDolZ4iASx3qj3SxvfjUrDiJxNDnHyUMcraq+O7BBesEiDiJxbHCg4TFLHETi2ObQJ1Nx9HagzSKOzY47PMTRw0H7EMcOjrJZxNHJEYeHOPZxiOEhjn4ONzzEQSSOrj4Pj/E3izh6O9ByEQfxEwfFsYN/w2PwzSIOInHso9LwaPjYlok4iMSxm/FftohjT1MfBTbLAw8+HF0cROLY2cjLRRxPUXWzPH7ghjj299Lh0fw69iKO56k6PB4Qx1OUPHl8+xAncTxLyT4eE8dJLXn2mziOLJ1GPamJ7z1+/SKO01n+MFFxnMLXj2dZcs/Dh9Qe1t3BouE5zuI4hbb7pNbKMaU5seoOuslxFg3Psi8aR8P/pKOG9VzWlu+ktTKj4eHNpfSKWxzRoIls+Rv9HXF8Y9BEuhDHIqMk0nFsXMoeSGuavt01j6t7XJU4VquWyOyVdJlz1kqjyoum14WJY5OCiXS8HmulgyKLpnum18uv8d7bWFlzItUm0MVa6a7gomkmjl0cIxFx7Gj0RMSxu3ETEceTjJiIOJ5qrETE8QKjJCKOl6mfiDherHIi7pASmRxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOor/EsPX5aQEtOQAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAENklEQVR4nO3d0W3bShCGUekiHaUTlxM/u510kpqUB14EhsxfJpdLaZY8pwCHsT/PrGhBvF5+3S4w579XXwB1iYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkThWuL1dX30JTyUOInGsc6rhIY4Vrr/P9UE34iASx2rn2SziIBLHOtOx4yTDQxxE4iASR6O+m+X20fGLdfPj1RdwdjWzmIhjtevvW5exUTmLiTja3d6ubfdM62cxEcdTjZLFRBybLB8eY2UxEUeLVceOEbOYiGNH42YxEcdWs5tl9Cwm4ujsGFlMxNHNq7L49+9e3zt/ZbfPG31eJbe3a4WBcfvoHKg4jqZjH+JodP8z+FPoHR69+hDHat2n90bX95nTRpcrdCBd4f47/vNWZ2BMfThzvMCiaVEglM8jZHsoJsc3Sm2QJzM5ompni4U6Dg9xzGjPosBmufS7G1Z0rQzzK1vpTDpry/1Tk6O3qq00jENxHFOaE6v6EMcp3J1SFyYijs1+fnmbYI3Ncjc8Zm+kPiaOU/h6LF0yPMRxOsv7EMc+amyWbz3uQxxHlu6WLjx8iKOHr2fSS/XhsWS5FL1DOobaP/7txNHP7Pwo7Pr+/9i4fcwvGmtlg9FqWEsc/ZTcMlv+gi+ObQYfHo+Ppc4ca5ScDfsRxxrp3RuDz4/EWulh5InyYLOIY6WDDolZ4iASx3qj3SxvfjUrDiJxNDnHyUMcraq+O7BBesEiDiJxbHCg4TFLHETi2ObQJ1Nx9HagzSKOzY47PMTRw0H7EMcOjrJZxNHJEYeHOPZxiOEhjn4ONzzEQSSOrj4Pj/E3izh6O9ByEQfxEwfFsYN/w2PwzSIOInHso9LwaPjYlok4iMSxm/FftohjT1MfBTbLAw8+HF0cROLY2cjLRRxPUXWzPH7ghjj299Lh0fw69iKO56k6PB4Qx1OUPHl8+xAncTxLyT4eE8dJLXn2mziOLJ1GPamJ7z1+/SKO01n+MFFxnMLXj2dZcs/Dh9Qe1t3BouE5zuI4hbb7pNbKMaU5seoOuslxFg3Psi8aR8P/pKOG9VzWlu+ktTKj4eHNpfSKWxzRoIls+Rv9HXF8Y9BEuhDHIqMk0nFsXMoeSGuavt01j6t7XJU4VquWyOyVdJlz1kqjyoum14WJY5OCiXS8HmulgyKLpnum18uv8d7bWFlzItUm0MVa6a7gomkmjl0cIxFx7Gj0RMSxu3ETEceTjJiIOJ5qrETE8QKjJCKOl6mfiDherHIi7pASmRxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOor/EsPX5aQEtOQAAAABJRU5ErkJggg==">
+<style>
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f2f2f7;margin:0;padding:12px;padding-top:calc(12px + var(--safe-top));padding-bottom:calc(100px + var(--safe-bottom));color:#1c1c1e;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+h1{font-size:20px;margin:0 0 10px;font-weight:700}
+.card{background:white;padding:14px;border-radius:16px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+label{font-size:13px;color:#666;display:block;margin-top:10px;font-weight:500}
+input,textarea,select{width:100%;padding:12px;box-sizing:border-box;border-radius:12px;border:1px solid #ddd;margin-top:4px;font-size:16px;font-family:inherit;background:#fff}
+textarea{min-height:80px;resize:vertical}
+button{border:none;border-radius:12px;padding:12px 14px;font-size:15px;margin-top:6px;cursor:pointer;font-weight:500;min-height:48px;touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.primary{background:#007aff;color:white}
+.success{background:#34c759;color:white}
+.danger{background:#ff3b30;color:white}
+.zalo{background:#0068ff;color:white}
+.warn{background:#ffcc00;color:#1c1c1e}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row button{flex:1 1 calc(50% - 5px);min-width:140px}
+.phone-card{background:white;padding:14px;border-radius:16px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.phone-number{font-size:18px;font-weight:bold}
+.status{margin:8px 0;padding:6px 12px;border-radius:999px;display:inline-block;font-size:13px;font-weight:500}
+.notified{background:#d1f7dd;color:#147a36}
+.not-notified{background:#ffe4e1;color:#c0392b}
+.info{margin-top:6px;font-size:14px;color:#333;line-height:1.4}
+.history{margin-top:8px;background:#f0f7ff;border:1px solid #cfe2ff;padding:8px;border-radius:10px;font-size:12px;color:#0a4a8f;white-space:pre-wrap}
+small{color:#888}
+.event-item{padding:12px;border:1px solid #ddd;border-radius:12px;margin-top:8px;background:#fafafa}
+.event-item.active{border-color:#007aff;background:#f0f7ff}
+.toast{position:fixed;bottom:calc(80px + var(--safe-bottom));left:50%;transform:translateX(-50%);background:#333;color:white;padding:12px 18px;border-radius:20px;font-size:14px;z-index:10000;opacity:0;transition:opacity .3s;max-width:90%;text-align:center}
+.toast.show{opacity:1}
+#userBar{position:sticky;top:0;z-index:100;background:white;border-bottom:1px solid #eee;margin: -12px -12px 12px -12px;padding:12px 14px;border-radius:0}
+details.card{padding:0}
+details.card > summary{padding:14px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.card > summary::-webkit-details-marker{display:none}
+details.card > summary::after{content:'▼';font-size:12px;color:#888}
+details.card[open] > summary::after{content:'▲'}
+details.card > div{padding:0 14px 14px}
+#bulkPanel{position:fixed;bottom:70px;left:0;right:0;margin:0;border-radius:16px 16px 0 0;border:none;border-top:2px solid #007aff;z-index:200;padding:12px 14px;box-shadow:0 -2px 10px rgba(0,0,0,.1)}
+#bulkPanel .row button{min-height:42px;font-size:14px;padding:10px 8px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #ddd;display:flex;z-index:300;padding-bottom:var(--safe-bottom);box-shadow:0 -1px 6px rgba(0,0,0,.08)}
+.nav-btn{flex:1;padding:10px 4px;text-align:center;font-size:11px;color:#666;background:none;border:none;min-height:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:500}
+.nav-btn.active{color:#007aff;font-weight:600}
+.nav-btn span{font-size:20px;line-height:1}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+@media (max-width: 400px) {
+  .row button { flex: 1 1 100%; }
+  h1 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div id="loginScreen" style="display:none;position:fixed;inset:0;background:#f2f2f7;z-index:999;padding:24px;overflow:auto">
+  <div class="card" style="max-width:400px;margin:40px auto">
+    <h2 style="margin-top:0">Đăng nhập</h2>
+    <label>Họ và tên</label>
+    <input type="text" id="loginName" placeholder="Nhập tên của bạn">
+
+    <label>Tên đội / Quản lý phường nào</label>
+    <input type="text" id="loginTeam" placeholder="VD: Đội 1 - Phường Tây Hồ">
+
+    <label>Số điện thoại</label>
+    <input type="tel" id="loginPhone" placeholder="Nhập số điện thoại">
+
+    <button class="primary" style="width:100%;margin-top:16px" onclick="doLogin()">Vào ứng dụng</button>
+    <small style="display:block;margin-top:12px;text-align:center">Thông tin được lưu trên máy này</small>
+  </div>
+</div>
+
+<div id="mainApp" style="display:none">
+
+<div class="card" id="userBar" style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px">
+  <div>
+    <b id="userDisplayName"></b><br>
+    <small id="userDisplayTeam"></small>
+  </div>
+  <button class="danger" style="margin:0;padding:8px 14px;min-height:40px" onclick="logout()">Đăng xuất</button>
+</div>
+
+<h1>🔊 Thông Báo Ngừng Cấp Điện</h1>
+
+<!-- Tab panels -->
+<div id="tab-customers" class="tab-panel active">
+  <div class="card">
+    <label>File danh sách khách hàng (.xlsx)</label>
+    <button class="primary" onclick="openExcelPicker()" style="width:100%">📂 Chọn file Excel</button>
+    <input type="file" id="excelFile" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,*/*" style="display:none">
+
+    <label>🔍 Tìm kiếm khách hàng</label>
+    <input type="text" id="searchInput" placeholder="SĐT, tên, địa chỉ, mã KH...">
+
+    <div class="row" style="margin-top:8px">
+      <button class="danger" onclick="clearCustomers()">🗑 Xóa danh sách</button>
+      <button class="primary" onclick="renderList()">🔄 Làm mới</button>
+      <button class="warn" onclick="selectAllVisible()">☑ Chọn tất cả hiện</button>
+      <button class="success" onclick="sendToAll('sms')">💬 SMS tất cả</button>
+      <button class="zalo" onclick="sendToAll('zalo')">🟦 Zalo tất cả</button>
+      <button class="primary" style="background:#5856d6" onclick="exportBackup()">💾 Xuất backup</button>
+      <button class="success" onclick="importBackup()">📥 Nhập backup</button>
+      <input type="file" id="backupFile" accept=".json" style="display:none">
+    </div>
+    <div id="counter" style="margin-top:10px;font-size:14px;font-weight:500"></div>
+  </div>
+  <div id="phoneList"></div>
+</div>
+
+<div id="tab-events" class="tab-panel">
+  <div class="card" style="padding:12px 14px">
+    <button class="success" onclick="createNewEvent()" style="width:100%;font-size:16px;margin:0;min-height:50px">+ Tạo đợt cắt điện mới</button>
+  </div>
+  <details class="card" open>
+    <summary>📋 Các đợt cắt điện</summary>
+    <div>
+      <div id="eventList"></div>
+      <button class="warn" onclick="saveCurrentEvent()" style="width:100%;margin-top:10px">💾 Lưu thông tin đợt đang chọn</button>
+      <div id="eventHistory" style="margin-top:10px;font-size:13px"></div>
+    </div>
+  </details>
+  <details class="card" open>
+    <summary>📝 Thông tin đợt cắt điện đang chọn</summary>
+    <div>
+      <label>Lý do ngừng cấp điện</label>
+      <input type="text" id="reason" placeholder="VD: Thay tủ RMU, bảo dưỡng đường dây...">
+
+      <label>Thời gian ngừng cấp điện</label>
+      <input type="text" id="startTime" placeholder="từ ... giờ ... ngày ...">
+
+      <label>Thời gian dự kiến cấp điện trở lại</label>
+      <input type="text" id="endTime" placeholder="... giờ ... ngày ...">
+
+      <label>Địa điểm / khu vực ngừng cấp điện</label>
+      <input type="text" id="location" placeholder="Địa điểm cụ thể">
+
+      <label>Tên trạm biến áp mất điện</label>
+      <input type="text" id="tram" placeholder="VD: Trạm BA Đình, Trạm Lạc Long Quân...">
+
+      <label>Số điện thoại liên hệ (tùy chọn)</label>
+      <input type="text" id="hotline" value="19001288">
+
+      <label>Tin nhắn mẫu (có thể sửa)</label>
+      <textarea id="template">Kính gửi quý khách hàng {{name}},
+Mã khách hàng: {{code}}
+Địa chỉ: {{address}}
+
+Công ty Điện lực xin thông báo lịch ngừng cấp điện như sau:
+
+• Lý do: {{reason}}
+• Trạm biến áp: {{tram}}
+• Thời gian ngừng cấp điện: {{startTime}}
+• Dự kiến cấp điện trở lại: {{endTime}}
+• Địa điểm/khu vực: {{location}}
+
+Mong quý khách thông cảm, chủ động sắp xếp công việc và thiết bị. Nếu có thay đổi thời gian, chúng tôi sẽ thông báo thêm.
+
+Nếu cần hỗ trợ, vui lòng liên hệ:
+- Nhân viên: {{senderName}} - {{senderTeam}}
+- Số điện thoại: {{senderPhone}}
+- Hotline tổng đài: {{hotline}}
+
+Trân trọng cảm ơn!</textarea>
+      <button class="warn" onclick="resetTemplate()" style="width:100%">↺ Khôi phục mẫu tin nhắn chuẩn (đầy đủ dấu)</button>
+    </div>
+  </details>
+</div>
+
+<div id="tab-photos" class="tab-panel">
+  <details class="card" open>
+    <summary>📷 Ảnh minh họa / hiện trường (đợt đang chọn)</summary>
+    <div>
+      <div class="row">
+        <button class="primary" onclick="openCamera()">📷 Chụp ảnh</button>
+        <button class="success" onclick="openGallery()">🖼️ Chọn từ thư viện</button>
+        <button class="warn" onclick="analyzeLatestPhoto()">🔍 Đọc ảnh thông báo (tự điền)</button>
+        <button class="danger" onclick="clearCurrentPhotos()">🗑 Xóa ảnh đợt này</button>
+      </div>
+      <div id="ocrStatus" style="margin-top:8px;font-size:13px;color:#666"></div>
+      <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="handleImage(this)">
+      <input type="file" id="galleryInput" accept="image/*" multiple style="display:none" onchange="handleImage(this)">
+      <div id="photoList" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px"></div>
+    </div>
+  </details>
+</div>
+
+<div id="tab-reminders" class="tab-panel">
+  <details class="card" open>
+    <summary>⏰ Lịch nhắc nhở gửi thông báo</summary>
+    <div>
+      <p style="font-size:13px;color:#666;margin:6px 0">Đánh dấu ngày giờ cần gửi thông báo cho từng đợt/trạm. Khi đến giờ sẽ có chuông + thông báo nhắc.</p>
+      
+      <label>Chọn đợt cắt điện</label>
+      <select id="reminderEvent" style="margin-bottom:8px"></select>
+      
+      <label>Ngày giờ nhắc nhở</label>
+      <input type="datetime-local" id="reminderTime">
+      
+      <label>Ghi chú (tùy chọn)</label>
+      <input type="text" id="reminderNote" placeholder="VD: Nhắc gửi cho trạm Lạc Long Quân">
+      
+      <button class="success" onclick="addReminder()" style="width:100%">+ Thêm nhắc nhở</button>
+      
+      <div id="reminderList" style="margin-top:12px"></div>
+      <button class="primary" onclick="requestNotificationPermission()" style="width:100%;margin-top:6px">🔔 Bật thông báo nhắc nhở</button>
+      <small id="notifStatus" style="display:block;margin-top:4px;color:#666"></small>
+    </div>
+  </details>
+</div>
+
+<div id="bulkPanel" class="card" style="display:none">
+  <div id="bulkInfo" style="font-weight:bold;margin-bottom:8px;font-size:15px"></div>
+  <div class="row">
+    <button class="primary" onclick="startBulkSend('sms', false)">💬 SMS lần lượt</button>
+    <button class="zalo" onclick="startBulkSend('zalo', false)">🟦 Zalo lần lượt</button>
+    <button class="success" onclick="startBulkSend('sms', true)">⚡ SMS tự động</button>
+    <button class="warn" onclick="startBulkSend('zalo', true)">⚡ Zalo tự động</button>
+    <button class="primary" style="background:#5856d6" onclick="startBulkSend('sms', true, 200)">🚀 SMS siêu nhanh</button>
+    <button class="danger" onclick="stopBulk()">Dừng</button>
+  </div>
+  <div id="bulkProgress" style="margin-top:8px;font-size:14px"></div>
+  <small style="display:block;margin-top:6px;color:#666">Lưu ý: Trên iPhone, chế độ tự động hoạt động khi bạn quay lại ứng dụng sau khi gửi SMS. Khuyến nghị dùng chế độ lần lượt nếu gặp vấn đề.</small>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <button class="nav-btn active" onclick="switchTab('customers')">
+    <span>👥</span>
+    Khách hàng
+  </button>
+  <button class="nav-btn" onclick="switchTab('events')">
+    <span>⚡</span>
+    Đợt điện
+  </button>
+  <button class="nav-btn" onclick="switchTab('photos')">
+    <span>📷</span>
+    Ảnh
+  </button>
+  <button class="nav-btn" onclick="switchTab('reminders')">
+    <span>⏰</span>
+    Nhắc nhở
+  </button>
+</div>
+
+<div id="toast" class="toast"></div>
+</div> <!-- end mainApp -->
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+let phoneData = [];
+let events = [];
+let currentEventId = null;
+let userInfo = null;
+
+const STANDARD_TEMPLATE = `Kính gửi quý khách hàng {{name}},
+Mã khách hàng: {{code}}
+Địa chỉ: {{address}}
+
+Công ty Điện lực xin thông báo lịch ngừng cấp điện như sau:
+
+• Lý do: {{reason}}
+• Trạm biến áp: {{tram}}
+• Thời gian ngừng cấp điện: {{startTime}}
+• Dự kiến cấp điện trở lại: {{endTime}}
+• Địa điểm/khu vực: {{location}}
+
+Mong quý khách thông cảm, chủ động sắp xếp công việc và thiết bị. Nếu có thay đổi thời gian, chúng tôi sẽ thông báo thêm.
+
+Nếu cần hỗ trợ, vui lòng liên hệ:
+- Nhân viên: {{senderName}} - {{senderTeam}}
+- Số điện thoại: {{senderPhone}}
+- Hotline tổng đài: {{hotline}}
+
+Trân trọng cảm ơn!`;
+
+function resetTemplate(){
+  const ta = document.getElementById('template');
+  if(ta) ta.value = STANDARD_TEMPLATE;
+  const ev = getCurrentEvent();
+  if(ev){
+    ev.template = STANDARD_TEMPLATE;
+    saveAll();
+  }
+  showToast('Đã khôi phục mẫu tin nhắn chuẩn đầy đủ dấu');
+}
+
+try {
+  phoneData = JSON.parse(localStorage.getItem('outageCustomers') || '[]');
+  events = JSON.parse(localStorage.getItem('outageEvents') || '[]');
+  currentEventId = localStorage.getItem('currentEventId') || null;
+  userInfo = JSON.parse(localStorage.getItem('outageUser') || 'null');
+} catch(e) {
+  console.error(e);
+  showToast('Lỗi đọc dữ liệu lưu trữ');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  if(!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function saveAll(){
+  try {
+    const dataStr = JSON.stringify({phoneData, events, currentEventId});
+    if(dataStr.length > 4_500_000){ // ~4.5MB warning (localStorage ~5MB)
+      showToast('⚠️ Dữ liệu đang lớn, hãy xóa bớt ảnh hoặc xuất backup');
+    }
+    localStorage.setItem('outageCustomers', JSON.stringify(phoneData));
+    localStorage.setItem('outageEvents', JSON.stringify(events));
+    if(currentEventId) localStorage.setItem('currentEventId', currentEventId);
+    else localStorage.removeItem('currentEventId');
+    updateCounter();
+  } catch(e) {
+    console.error(e);
+    alert('Không lưu được dữ liệu (có thể do ảnh quá nhiều hoặc bộ nhớ đầy). Hãy xóa bớt ảnh hoặc xuất backup.');
+  }
+}
+
+function getCurrentEvent(){
+  return events.find(e => e.id === currentEventId) || null;
+}
+
+function createNewEvent(){
+  const id = 'ev_' + Date.now();
+  const newEv = {
+    id,
+    name: 'Đợt cắt điện ' + new Date().toLocaleDateString('vi-VN'),
+    reason: '',
+    startTime: '',
+    endTime: '',
+    location: '',
+    tram: '',
+    hotline: '19001288',
+    template: STANDARD_TEMPLATE,
+    photos: [],
+    notifiedPhones: []
+  };
+  events.push(newEv);
+  currentEventId = id;
+  saveAll();
+  loadEventToForm();
+  renderEvents();
+  renderPhotos();
+  renderList();
+  updateReminderEventSelect();
+  showToast('Đã tạo đợt mới');
+}
+
+function saveCurrentEvent(silent){
+  const ev = getCurrentEvent();
+  if(!ev) { if(!silent) alert('Chưa chọn đợt nào'); return; }
+  ev.reason = document.getElementById('reason').value;
+  ev.startTime = document.getElementById('startTime').value;
+  ev.endTime = document.getElementById('endTime').value;
+  ev.location = document.getElementById('location').value;
+  ev.tram = document.getElementById('tram').value;
+  ev.hotline = document.getElementById('hotline').value;
+  ev.template = document.getElementById('template').value;
+  // Tự động đặt tên đợt từ lý do + thời gian
+  const r = (ev.reason || '').trim();
+  const s = (ev.startTime || '').trim();
+  ev.name = r ? (s ? r.substring(0, 25) + ' - ' + s.substring(0, 20) : r.substring(0, 40)) : ('Đợt ' + new Date().toLocaleDateString('vi-VN'));
+  saveAll();
+  renderEvents();
+  updateReminderEventSelect();
+  if(!silent) showToast('Đã lưu thông tin đợt');
+}
+
+function selectEvent(id){
+  saveCurrentEvent(true);
+  currentEventId = id;
+  saveAll();
+  loadEventToForm();
+  renderEvents();
+  renderPhotos();
+  renderList();
+}
+
+function deleteEvent(id){
+  const ev = events.find(e => e.id === id);
+  if(!ev) return;
+  if(!confirm('Xóa đợt cắt điện "' + (ev.name || '') + '"?')) return;
+  events = events.filter(e => e.id !== id);
+  if(currentEventId === id) currentEventId = events[0]?.id || null;
+  saveAll();
+  loadEventToForm();
+  renderEvents();
+  renderPhotos();
+  renderList();
+  updateReminderEventSelect();
+  showToast('Đã xóa đợt cắt điện');
+}
+
+function loadEventToForm(){
+  const ev = getCurrentEvent();
+  const ids = ['reason','startTime','endTime','location','tram','hotline','template'];
+  if(!ev){
+    ids.forEach(id => { const el = document.getElementById(id); if(el) el.value = id === 'hotline' ? '19001288' : ''; });
+    return;
+  }
+  document.getElementById('reason').value = ev.reason || '';
+  document.getElementById('startTime').value = ev.startTime || '';
+  document.getElementById('endTime').value = ev.endTime || '';
+  document.getElementById('location').value = ev.location || '';
+  document.getElementById('tram').value = ev.tram || '';
+  document.getElementById('hotline').value = ev.hotline || '19001288';
+  document.getElementById('template').value = ev.template || STANDARD_TEMPLATE;
+}
+
+// Tự động lưu form khi người dùng rời khỏi ô nhập (không cần bấm nút Lưu)
+['reason','startTime','endTime','location','tram','hotline','template'].forEach(id => {
+  const el = document.getElementById(id);
+  if(el){
+    el.addEventListener('blur', () => saveCurrentEvent(true));
+  }
+});
+
+function renderEvents(){
+  const container = document.getElementById('eventList');
+  if(!container) return;
+  container.innerHTML = '';
+  if(events.length === 0){
+    container.innerHTML = '<small>Chưa có đợt nào. Bấm "+ Tạo đợt cắt điện mới"</small>';
+    return;
+  }
+  events.forEach(ev => {
+    const div = document.createElement('div');
+    div.className = 'event-item' + (ev.id === currentEventId ? ' active' : '');
+    div.innerHTML = `
+      <b>${escapeHtml(ev.name || 'Không tên')}</b><br>
+      <small>${escapeHtml(ev.reason || '')} | ${escapeHtml(ev.startTime || '')}</small>
+      <div class="row">
+        <button class="primary" type="button" data-action="select" data-id="${ev.id}">${ev.id === currentEventId ? '✓ Đang chọn' : 'Chọn'}</button>
+        <button class="danger" type="button" data-action="delete" data-id="${ev.id}">Xóa</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+  // Gắn sự kiện nút bấm
+  container.querySelectorAll('button[data-action]').forEach(btn => {
+    btn.onclick = function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      const id = this.getAttribute('data-id');
+      const action = this.getAttribute('data-action');
+      if(action === 'select') selectEvent(id);
+      else if(action === 'delete') deleteEvent(id);
+    };
+  });
+  // Hiển thị báo cáo / lịch sử của đợt đang chọn
+  const histEl = document.getElementById('eventHistory');
+  if(histEl){
+    const ev = getCurrentEvent();
+    if(ev && ev.history){
+      histEl.innerHTML = `<div class="history"><b>📋 Báo cáo / Lịch sử đợt này:</b><br>${escapeHtml(ev.history)}</div>`;
+    } else {
+      histEl.innerHTML = '';
+    }
+  }
+}
+
+function updateCounter(){
+  const total = phoneData.length;
+  const ev = getCurrentEvent();
+  const notified = ev ? phoneData.filter(p => ev.notifiedPhones && ev.notifiedPhones.includes(p.phone)).length : 0;
+  const el = document.getElementById('counter');
+  if(el) el.innerHTML = `Tổng KH: <b>${total}</b> | Đã thông báo (đợt này): <b>${notified}</b>`;
+}
+
+function normalizePhone(p){
+  let phone = String(p || '').replace(/[^0-9]/g, '');
+  // Handle country code
+  if (phone.startsWith('84') && phone.length >= 11) {
+    phone = '0' + phone.slice(2);
+  }
+  // Common Vietnamese mobile: 10 digits starting with 0
+  if (phone.length === 9 && !phone.startsWith('0')) {
+    phone = '0' + phone;
+  }
+  // Accept 10-digit numbers starting with 0, or other lengths as fallback
+  return phone;
+}
+
+function setupExcelImport(){
+  const input = document.getElementById('excelFile');
+  if(!input) return;
+  input.onchange = function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      try {
+        const data = new Uint8Array(ev.target.result);
+        const wb = XLSX.read(data, {type:'array'});
+        const json = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+        let added = 0;
+        json.forEach(row => {
+          const phoneRaw = row.SO_DIENTHOAI || row.SDT || row.DIENTHOAI || row.PHONE || row['Số điện thoại'] || row['So dien thoai'] || row['SĐT'] || '';
+          const phone = normalizePhone(phoneRaw);
+          if(!phone) return;
+          if(phoneData.find(p => p.phone === phone)) return;
+
+          phoneData.push({
+            phone,
+            customerCode: row.MA_KHTT || row.MA_KH || row.MAKH || row['Mã KH'] || row['Ma KH'] || row['MAKH'] || '',
+            customerName: row.TEN_KHTT || row.TEN_KH || row.TENKH || row['Tên KH'] || row['Ten KH'] || '',
+            address: row.DCHI_KHTT || row.DCHI_KH || row.DCHI || row['Địa chỉ'] || row['Dia chi'] || '',
+            note: '',
+            history: ''
+          });
+          added++;
+        });
+        saveAll();
+        renderList();
+        alert('Đã import ' + added + ' khách hàng');
+      } catch(err){
+        alert('Không đọc được file Excel. Thử lưu file dưới dạng .xlsx rồi chọn lại.');
+        console.error(err);
+      }
+    };
+    reader.onerror = function(){ alert('Không đọc được file. Thử lại.'); };
+    reader.readAsArrayBuffer(file);
+    setTimeout(() => { input.value = ''; }, 100);
+  };
+}
+
+function openExcelPicker(){
+  const input = document.getElementById('excelFile');
+  if(!input) return;
+  input.value = '';
+  input.click();
+}
+
+function openCamera(){
+  const input = document.getElementById('cameraInput');
+  if(!input) return;
+  input.value = '';
+  input.click();
+}
+
+function openGallery(){
+  const input = document.getElementById('galleryInput');
+  if(!input) return;
+  input.value = '';
+  input.click();
+}
+
+function getMessage(item){
+  // Tự động lưu form trước khi tạo tin nhắn (silent)
+  saveCurrentEvent(true);
+  
+  const ev = getCurrentEvent();
+  if(!ev) return 'Chưa chọn đợt cắt điện';
+
+  // Ưu tiên lấy giá trị đang nhập trên form (không cần bấm Lưu trước)
+  const reason = document.getElementById('reason')?.value || ev.reason || '(chưa cập nhật)';
+  const startTime = document.getElementById('startTime')?.value || ev.startTime || '';
+  const endTime = document.getElementById('endTime')?.value || ev.endTime || '';
+  const location = document.getElementById('location')?.value || ev.location || '';
+  const tram = document.getElementById('tram')?.value || ev.tram || '';
+  const hotline = document.getElementById('hotline')?.value || ev.hotline || '19001288';
+  const template = document.getElementById('template')?.value || ev.template || STANDARD_TEMPLATE;
+
+  let tpl = template;
+
+  // Làm sạch thời gian để tránh trùng mục và lỗi chính tả
+  function cleanTime(t) {
+    if (!t) return '';
+    t = String(t)
+      .replace(/\|\s*2\.\s*Thời gian.*/i, '')
+      .replace(/2\.\s*Thời gian dự kiến.*/i, '')
+      .replace(/Thời gian dự kiến cấp điện trở lại.*/i, '')
+      .replace(/cap\s+điện/gi, 'cấp điện')
+      .replace(/du\s+kien/gi, 'dự kiến')
+      .replace(/ngung\s+cap/gi, 'ngừng cấp')
+      .replace(/\s+/g, ' ')
+      .trim();
+    return t;
+  }
+
+  const map = {
+    reason: reason || '(chưa cập nhật)',
+    startTime: cleanTime(startTime),
+    endTime: cleanTime(endTime),
+    location: location || '',
+    tram: tram || '',
+    hotline: hotline || '19001288',
+    name: item.customerName || '',
+    code: item.customerCode || '',
+    address: item.address || '',
+    senderPhone: (userInfo && userInfo.phone) ? userInfo.phone : '',
+    senderName: (userInfo && userInfo.name) ? userInfo.name : '',
+    senderTeam: (userInfo && userInfo.team) ? userInfo.team : ''
+  };
+  for(const k in map){
+    tpl = tpl.replace(new RegExp('\\{\\{'+k+'\\}\\}', 'g'), map[k]);
+  }
+  return tpl;
+}
+
+document.getElementById('searchInput')?.addEventListener('input', renderList);
+
+function compressImage(dataUrl, maxWidth = 600, quality = 0.6) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      let w = img.width, h = img.height;
+      if (w > maxWidth) {
+        h = h * (maxWidth / w);
+        w = maxWidth;
+      }
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL('image/jpeg', quality));
+    };
+    img.onerror = () => resolve(dataUrl);
+    img.src = dataUrl;
+  });
+}
+
+function handleImage(input){
+  const ev = getCurrentEvent();
+  if(!ev){ alert('Hãy chọn hoặc tạo đợt cắt điện trước'); return; }
+  const files = input.files;
+  if(!files || files.length === 0) return;
+
+  if(ev.photos && ev.photos.length + files.length > 8){
+    alert('Mỗi đợt chỉ nên lưu tối đa khoảng 8 ảnh để tránh đầy bộ nhớ. Hãy xóa bớt ảnh cũ.');
+    return; // Không thêm ảnh mới nếu đã vượt giới hạn
+  }
+
+  Array.from(files).forEach(file => {
+    if(!file.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = async function(e){
+      if(!ev.photos) ev.photos = [];
+      const compressed = await compressImage(e.target.result);
+      ev.photos.push({
+        id: Date.now() + Math.random(),
+        data: compressed,
+        name: file.name,
+        time: new Date().toLocaleString('vi-VN')
+      });
+      saveAll();
+      renderPhotos();
+    };
+    reader.readAsDataURL(file);
+  });
+  input.value = '';
+}
+
+function deletePhoto(id){
+  const ev = getCurrentEvent();
+  if(!ev || !ev.photos) return;
+  ev.photos = ev.photos.filter(p => p.id !== id);
+  saveAll();
+  renderPhotos();
+}
+
+function clearCurrentPhotos(){
+  const ev = getCurrentEvent();
+  if(!ev) return;
+  if(confirm('Xóa tất cả ảnh của đợt này?')){
+    ev.photos = [];
+    saveAll();
+    renderPhotos();
+  }
+}
+
+async function analyzeLatestPhoto(){
+  const ev = getCurrentEvent();
+  if(!ev || !ev.photos || ev.photos.length === 0){
+    alert('Hãy chụp hoặc chọn ảnh thông báo trước');
+    return;
+  }
+  const status = document.getElementById('ocrStatus');
+  status.textContent = 'Đang đọc ảnh... (có thể mất 10-20 giây lần đầu)';
+  
+  try {
+    const lastPhoto = ev.photos[ev.photos.length - 1];
+    const worker = await Tesseract.createWorker('vie+eng', 1, {
+      logger: m => {
+        if(m.status === 'recognizing text'){
+          status.textContent = 'Đang nhận dạng: ' + Math.round(m.progress * 100) + '%';
+        }
+      }
+    });
+    const { data: { text } } = await worker.recognize(lastPhoto.data);
+    await worker.terminate();
+    
+    status.textContent = 'Đã đọc xong. Đang điền thông tin...';
+    parseAndFill(text);
+    status.textContent = 'Đã tự điền xong. Kiểm tra lại các ô bên dưới.';
+    showToast('Đã tự điền từ ảnh');
+  } catch(err){
+    console.error(err);
+    status.textContent = 'Lỗi khi đọc ảnh. Thử lại hoặc nhập tay.';
+    alert('Không đọc được ảnh. Vui lòng nhập tay.');
+  }
+}
+
+function parseAndFill(text){
+  // Chuẩn hóa text: loại bỏ nhiều khoảng trắng, sửa lỗi OCR phổ biến
+  let full = text
+    .replace(/\s+/g, ' ')
+    .replace(/[|]/g, ' ')
+    .replace(/cap\s+dien/gi, 'cấp điện')
+    .replace(/ngung\s+cap/gi, 'ngừng cấp')
+    .replace(/du\s+kien/gi, 'dự kiến')
+    .replace(/thoi\s+gian/gi, 'thời gian')
+    .replace(/dia\s+diem/gi, 'địa điểm')
+    .replace(/tram\s+bien\s+ap/gi, 'trạm biến áp')
+    .trim();
+
+  // Lý do
+  let reason = '';
+  const reasonPatterns = [
+    /(?:để|de)\s+(Thay|thay|Bảo|bảo|Sửa|sua|Cải|cai)[^.]{5,100}/i,
+    /Thay\s+tủ\s+RMU[^.]{0,60}/i,
+    /Bảo\s+dưỡng[^.]{0,80}/i,
+    /Sửa\s+chữa[^.]{0,80}/i
+  ];
+  for(const pat of reasonPatterns){
+    const m = full.match(pat);
+    if(m){ reason = m[0].replace(/^(để|de)\s+/i, '').trim(); break; }
+  }
+  if(reason) document.getElementById('reason').value = reason;
+
+  // Thời gian bắt đầu
+  let start = '';
+  const startPatterns = [
+    /Thời\s+gian\s+ngừng\s+cấp\s+điện[:\s]+([^\n]{10,100})/i,
+    /từ\s+\d+\s+giờ\s+\d+[^.]{0,60}/i,
+    /\d+\s*h\s*\d+\s*ngày\s+\d+\/\d+\/\d+/i
+  ];
+  for(const pat of startPatterns){
+    const m = full.match(pat);
+    if(m){ start = (m[1] || m[0]).trim(); break; }
+  }
+  start = start.replace(/\s*2\.\s*Thời\s+gian.*/i, '').replace(/\s*dự\s+kiến.*/i, '').trim();
+  if(start) document.getElementById('startTime').value = start;
+
+  // Thời gian kết thúc
+  let end = '';
+  const endPatterns = [
+    /Thời\s+gian\s+dự\s+kiến\s+cấp\s+điện\s+trở\s+lại[:\s]+([^\n]{5,100})/i,
+    /\d+\s+giờ\s+\d+\s+ngày\s+\d+\s+tháng\s+\d+\s+năm\s+\d+/i,
+    /\d+\s*h\s*\d+\s*ngày\s+\d+\/\d+\/\d+/i
+  ];
+  for(const pat of endPatterns){
+    const m = full.match(pat);
+    if(m){ end = (m[1] || m[0]).trim(); break; }
+  }
+  if(end) document.getElementById('endTime').value = end;
+
+  // Địa điểm
+  let loc = '';
+  const locPatterns = [
+    /Địa\s+điểm\s+ngừng\s+cấp\s+điện[:\s]+([^\n]{10,120})/i,
+    /Lô\s+[A-Z0-9]+[^.]{0,80}/i,
+    /Khu\s+vực[^.]{5,80}/i
+  ];
+  for(const pat of locPatterns){
+    const m = full.match(pat);
+    if(m){ loc = (m[1] || m[0]).trim(); break; }
+  }
+  if(loc) document.getElementById('location').value = loc;
+
+  // Trạm biến áp
+  let tram = '';
+  const tramMatch = full.match(/(?:Trạm|tram)\s+(?:biến\s+áp\s+)?([A-ZÀ-Ỹ0-9\s\-]{3,50})/i);
+  if(tramMatch) tram = tramMatch[1].trim();
+  if(tram) document.getElementById('tram').value = tram;
+
+  // Hotline
+  const hotMatch = full.match(/(?:liên\s+hệ|hotline|sđt)[:\s]*(\d{4,})/i) || full.match(/\b(1900\d{4,}|0\d{9})\b/);
+  if(hotMatch){
+    document.getElementById('hotline').value = hotMatch[1] || hotMatch[0];
+  }
+
+  saveCurrentEvent(true);
+}
+
+function renderPhotos(){
+  const container = document.getElementById('photoList');
+  if(!container) return;
+  container.innerHTML = '';
+  const ev = getCurrentEvent();
+  if(!ev || !ev.photos || ev.photos.length === 0){
+    container.innerHTML = '<small>Chưa có ảnh</small>';
+    return;
+  }
+  ev.photos.forEach(p => {
+    const wrap = document.createElement('div');
+    wrap.style.position = 'relative';
+    wrap.innerHTML = `
+      <img src="${p.data}" onclick="viewPhoto(this.src)" style="width:100px;height:100px;object-fit:cover;border-radius:10px;border:1px solid #ddd;cursor:pointer">
+      <button onclick="event.stopPropagation();deletePhoto(${p.id})" style="position:absolute;top:2px;right:2px;background:#ff3b30;color:white;border:none;border-radius:50%;width:22px;height:22px;font-size:12px;padding:0;cursor:pointer">×</button>
+    `;
+    container.appendChild(wrap);
+  });
+}
+
+function viewPhoto(src){
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;padding:8px';
+  overlay.onclick = () => overlay.remove();
+  overlay.innerHTML = `
+    <img src="${src}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:6px">
+    <div style="position:absolute;top:12px;right:12px;color:white;font-size:30px;background:rgba(0,0,0,0.6);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1">×</div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+function isNotified(phone){
+  const ev = getCurrentEvent();
+  return ev && ev.notifiedPhones && ev.notifiedPhones.includes(phone);
+}
+
+function markNotified(phone, text){
+  const ev = getCurrentEvent();
+  if(!ev) return;
+  if(!ev.notifiedPhones) ev.notifiedPhones = [];
+  if(!ev.notifiedPhones.includes(phone)) ev.notifiedPhones.push(phone);
+
+  const item = phoneData.find(p => p.phone === phone);
+  if(item){
+    const time = new Date().toLocaleString('vi-VN');
+    const line = `[${time}] ${text} (${ev.name})`;
+    item.history = item.history ? item.history + '\n' + line : line;
+  }
+  saveAll();
+}
+
+function sendSMS(index){
+  const item = phoneData[index];
+  if(!item) return;
+  const msg = encodeURIComponent(getMessage(item));
+  markNotified(item.phone, '💬 Đã bấm gửi SMS');
+  renderList();
+  const isAndroid = /android/i.test(navigator.userAgent);
+  const sep = isAndroid ? '?' : '&';
+  window.location.href = `sms:${item.phone}${sep}body=${msg}`;
+}
+
+function sendZalo(index){
+  const item = phoneData[index];
+  if(!item) return;
+  const msg = getMessage(item);
+  copyToClipboard(msg);
+  markNotified(item.phone, '🟦 Đã copy tin + mở Zalo');
+  renderList();
+  showToast('Đã copy tin nhắn. Dán vào Zalo.');
+  window.location.href = 'https://zalo.me/' + encodeURIComponent(item.phone);
+}
+
+function copyToClipboard(text){
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+  if(navigator.clipboard) navigator.clipboard.writeText(text).catch(()=>{});
+}
+
+function callPhone(index){
+  const item = phoneData[index];
+  if(!item || !item.phone) return;
+  markNotified(item.phone, '📞 Đã gọi điện');
+  renderList();
+  window.location.href = 'tel:' + item.phone;
+}
+
+function previewMessage(index){
+  const item = phoneData[index];
+  if(!item) return;
+  const msg = getMessage(item);
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px';
+  overlay.onclick = (e) => { if(e.target === overlay) overlay.remove(); };
+  const box = document.createElement('div');
+  box.style.cssText = 'background:white;border-radius:16px;max-width:480px;width:100%;max-height:80vh;overflow:auto;padding:16px;position:relative';
+  box.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <b>Xem trước tin nhắn</b>
+      <button onclick="this.closest('div').parentElement.parentElement.remove()" style="background:#ff3b30;color:white;border:none;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer">×</button>
+    </div>
+    <div style="white-space:pre-wrap;font-size:15px;line-height:1.5;background:#f8f9fa;padding:12px;border-radius:10px;border:1px solid #eee">${escapeHtml(msg)}</div>
+    <div style="margin-top:12px;text-align:right">
+      <button class="primary" onclick="this.closest('div').parentElement.parentElement.remove()" style="margin:0">Đóng</button>
+    </div>
+  `;
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
+function toggleNotified(index){
+  const item = phoneData[index];
+  const ev = getCurrentEvent();
+  if(!ev) return;
+  if(!ev.notifiedPhones) ev.notifiedPhones = [];
+  const time = new Date().toLocaleString('vi-VN');
+  if(ev.notifiedPhones.includes(item.phone)){
+    ev.notifiedPhones = ev.notifiedPhones.filter(p => p !== item.phone);
+    const line = `[${time}] ✗ Bỏ đánh dấu đã thông báo (${ev.name})`;
+    item.history = item.history ? item.history + '\n' + line : line;
+  } else {
+    ev.notifiedPhones.push(item.phone);
+    const line = `[${time}] ✓ Đánh dấu ĐÃ THÔNG BÁO (${ev.name})`;
+    item.history = item.history ? item.history + '\n' + line : line;
+  }
+  saveAll();
+  renderList();
+}
+
+function updateNote(index, value){
+  if(phoneData[index]) phoneData[index].note = value;
+  saveAll();
+}
+
+function deleteItem(index){
+  const item = phoneData[index];
+  if(!item) return;
+  if(confirm('Xóa khách hàng ' + (item.customerName || item.phone) + '?')){
+    phoneData.splice(index, 1);
+    saveAll();
+    renderList();
+    showToast('Đã xóa khách hàng');
+  }
+}
+
+function editPhone(index){
+  const item = phoneData[index];
+  if(!item) return;
+  const newPhone = prompt('Nhập số điện thoại mới:', item.phone);
+  if(newPhone === null) return;
+  const cleaned = normalizePhone(newPhone);
+  if(!cleaned){
+    alert('Số điện thoại không hợp lệ');
+    return;
+  }
+  if(cleaned === item.phone) return;
+  if(phoneData.find(p => p.phone === cleaned && p !== item)){
+    alert('Số này đã có trong danh sách');
+    return;
+  }
+  const oldPhone = item.phone;
+  item.phone = cleaned;
+  const time = new Date().toLocaleString('vi-VN');
+  item.history = (item.history ? item.history + '\n' : '') + `[${time}] Đổi SĐT từ ${oldPhone} → ${cleaned}`;
+
+  events.forEach(ev => {
+    if(ev.notifiedPhones && ev.notifiedPhones.includes(oldPhone)){
+      ev.notifiedPhones = ev.notifiedPhones.map(p => p === oldPhone ? cleaned : p);
+    }
+  });
+
+  saveAll();
+  renderList();
+}
+
+function clearCustomers(){
+  if(confirm('Xóa toàn bộ danh sách khách hàng?')){
+    phoneData = [];
+    saveAll();
+    renderList();
+  }
+}
+
+function escapeHtml(s){
+  const div = document.createElement('div');
+  div.textContent = s == null ? '' : String(s);
+  return div.innerHTML;
+}
+
+function renderList(){
+  const list = document.getElementById('phoneList');
+  if(!list) return;
+  const q = (document.getElementById('searchInput')?.value || '').trim().toLowerCase();
+  list.innerHTML = '';
+
+  const filtered = phoneData.filter(item =>
+    !q ||
+    item.phone.includes(q) ||
+    (item.customerName||'').toLowerCase().includes(q) ||
+    (item.address||'').toLowerCase().includes(q) ||
+    (item.customerCode||'').toLowerCase().includes(q)
+  );
+
+  filtered.forEach(item => {
+    const idx = phoneData.indexOf(item);
+    const notified = isNotified(item.phone);
+    const div = document.createElement('div');
+    div.className = 'phone-card';
+    div.innerHTML = `
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+        <input type="checkbox" class="bulkCheck" data-phone="${escapeHtml(item.phone)}" onchange="updateBulkPanel()" style="width:28px;height:28px;min-width:28px">
+        <div class="phone-number" onclick="editPhone(${idx})" style="cursor:pointer;border-bottom:1px dashed #007aff;flex:1">${escapeHtml(item.phone)} ✏️</div>
+      </div>
+      <div class="info">
+        <b>${escapeHtml(item.customerName)}</b><br>
+        Mã KH: ${escapeHtml(item.customerCode)}<br>
+        ${escapeHtml(item.address)}
+      </div>
+      <div class="status ${notified ? 'notified' : 'not-notified'}" onclick="toggleNotified(${idx})" style="cursor:pointer">
+        ${notified ? '✓ Đã thông báo' : '○ Chưa thông báo'}
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="success" type="button" onclick="callPhone(${idx})">📞 Gọi</button>
+        <button class="success" type="button" onclick="sendSMS(${idx})">💬 SMS</button>
+        <button class="zalo" type="button" onclick="sendZalo(${idx})">🟦 Zalo</button>
+        <button class="warn" type="button" onclick="previewMessage(${idx})">👁 Xem trước</button>
+        <button class="danger" type="button" onclick="deleteItem(${idx})">Xóa</button>
+      </div>
+      <label style="margin-top:12px">Ghi chú</label>
+      <textarea onchange="updateNote(${idx}, this.value)" style="min-height:60px">${escapeHtml(item.note||'')}</textarea>
+      ${item.history ? `<div class="history">${escapeHtml(item.history)}</div>` : ''}
+    `;
+    list.appendChild(div);
+  });
+  updateCounter();
+  updateBulkPanel();
+}
+
+function selectAllVisible(){
+  document.querySelectorAll('.bulkCheck').forEach(c => c.checked = true);
+  updateBulkPanel();
+}
+
+function sendToAll(mode){
+  if(phoneData.length === 0){
+    alert('Chưa có khách hàng nào trong danh sách');
+    return;
+  }
+  const total = phoneData.length;
+  const modeName = mode === 'sms' ? 'SMS' : 'Zalo';
+  if(!confirm(`Gửi ${modeName} cho tất cả ${total} khách hàng?\n\nLưu ý: Trên iPhone, chế độ tự động hoạt động khi bạn quay lại ứng dụng sau mỗi tin. Khuyến nghị dùng chế độ lần lượt nếu gặp vấn đề.`)) return;
+
+  // Gửi toàn bộ danh sách (bỏ qua bộ lọc tìm kiếm hiện tại)
+  bulkMode = mode;
+  bulkAuto = false;
+  bulkDelay = 800;
+  bulkQueue = phoneData.map(p => p.phone);
+  bulkIndex = 0;
+  
+  // Hiển thị panel tiến trình
+  const panel = document.getElementById('bulkPanel');
+  if(panel) panel.style.display = 'block';
+  document.getElementById('bulkInfo').textContent = `Đang gửi tất cả ${total} khách hàng`;
+  
+  sendNextInQueue();
+}
+
+let bulkQueue = [];
+let bulkMode = '';
+let bulkIndex = 0;
+let bulkAuto = false;
+let bulkDelay = 400;
+
+function updateBulkPanel(){
+  const checks = document.querySelectorAll('.bulkCheck:checked');
+  const panel = document.getElementById('bulkPanel');
+  if(!panel) return;
+  if(checks.length > 0){
+    panel.style.display = 'block';
+    document.getElementById('bulkInfo').textContent = `Đã chọn ${checks.length} khách hàng`;
+  } else {
+    panel.style.display = 'none';
+  }
+}
+
+function startBulkSend(mode, auto, delay){
+  const checks = document.querySelectorAll('.bulkCheck:checked');
+  if(checks.length === 0) return;
+  if(checks.length > 50 && !confirm(`Bạn đang chọn ${checks.length} khách hàng. Gửi hàng loạt có thể mất thời gian. Tiếp tục?`)) return;
+  
+  bulkMode = mode;
+  bulkAuto = auto;
+  bulkDelay = delay || 800; // Tăng delay mặc định để tránh spam
+  bulkQueue = Array.from(checks).map(c => c.dataset.phone);
+  bulkIndex = 0;
+  sendNextInQueue();
+}
+
+function sendNextInQueue(){
+  if(bulkIndex >= bulkQueue.length){
+    document.getElementById('bulkProgress').textContent = 'Đã gửi xong tất cả!';
+    document.querySelectorAll('.bulkCheck:checked').forEach(c => c.checked = false);
+    updateBulkPanel();
+    bulkAuto = false;
+    showToast('Đã gửi xong hàng loạt');
+    return;
+  }
+  const phone = bulkQueue[bulkIndex];
+  const item = phoneData.find(p => p.phone === phone);
+  if(!item){
+    bulkIndex++;
+    sendNextInQueue();
+    return;
+  }
+  const progress = document.getElementById('bulkProgress');
+  progress.innerHTML = `Đang gửi ${bulkIndex + 1}/${bulkQueue.length}: <b>${escapeHtml(phone)}</b>
+    ${bulkAuto ? '<br><small>⚡ Tự động chuyển tiếp khi quay lại</small>' : ''}
+    <br><button class="success" onclick="confirmAndNext()" style="margin-top:6px">✓ Tiếp theo</button>`;
+
+  if(bulkMode === 'sms'){
+    const msg = encodeURIComponent(getMessage(item));
+    markNotified(item.phone, '💬 Đã bấm gửi SMS (hàng loạt)');
+    const isAndroid = /android/i.test(navigator.userAgent);
+    const sep = isAndroid ? '?' : '&';
+    window.location.href = `sms:${item.phone}${sep}body=${msg}`;
+  } else {
+    const msg = getMessage(item);
+    copyToClipboard(msg);
+    markNotified(item.phone, '🟦 Đã copy tin + mở Zalo (hàng loạt)');
+    if(!bulkAuto) showToast('Đã copy tin. Dán vào Zalo rồi bấm Tiếp theo');
+    window.location.href = 'https://zalo.me/' + encodeURIComponent(item.phone);
+  }
+}
+
+function confirmAndNext(){
+  bulkIndex++;
+  sendNextInQueue();
+}
+
+document.addEventListener('visibilitychange', function(){
+  if(document.visibilityState === 'visible' && bulkAuto && bulkQueue.length > 0 && bulkIndex < bulkQueue.length){
+    setTimeout(() => {
+      bulkIndex++;
+      sendNextInQueue();
+    }, bulkDelay);
+  }
+});
+
+function stopBulk(){
+  bulkQueue = [];
+  bulkIndex = 0;
+  bulkAuto = false;
+  document.getElementById('bulkProgress').textContent = 'Đã dừng';
+  document.querySelectorAll('.bulkCheck:checked').forEach(c => c.checked = false);
+  updateBulkPanel();
+}
+
+function exportBackup(){
+  const data = {
+    phoneData,
+    events,
+    currentEventId,
+    userInfo,
+    reminders,
+    exportedAt: new Date().toISOString()
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'backup-thong-bao-mat-dien-' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  showToast('Đã xuất file backup');
+}
+
+function importBackup(){
+  const input = document.getElementById('backupFile');
+  input.onchange = function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      try {
+        const data = JSON.parse(ev.target.result);
+        if(data.phoneData) phoneData = data.phoneData;
+        if(data.events) events = data.events;
+        if(data.currentEventId) currentEventId = data.currentEventId;
+        if(data.userInfo) {
+          userInfo = data.userInfo;
+          localStorage.setItem('outageUser', JSON.stringify(userInfo));
+        }
+        if(data.reminders) {
+          reminders = data.reminders;
+          saveReminders();
+        }
+        saveAll();
+        loadEventToForm();
+        renderEvents();
+        renderPhotos();
+        renderList();
+        updateReminderEventSelect();
+        renderReminders();
+        showApp();
+        alert('Đã nhập backup thành công');
+      } catch(err){
+        alert('File backup không hợp lệ');
+        console.error(err);
+      }
+    };
+    reader.readAsText(file);
+    input.value = '';
+  };
+  input.click();
+}
+
+let reminders = [];
+try {
+  reminders = JSON.parse(localStorage.getItem('outageReminders') || '[]');
+} catch(e) {}
+
+function saveReminders(){
+  localStorage.setItem('outageReminders', JSON.stringify(reminders));
+  renderReminders();
+  updateReminderEventSelect();
+}
+
+function updateReminderEventSelect(){
+  const sel = document.getElementById('reminderEvent');
+  if(!sel) return;
+  sel.innerHTML = '<option value="">-- Chọn đợt --</option>';
+  events.forEach(ev => {
+    const opt = document.createElement('option');
+    opt.value = ev.id;
+    opt.textContent = ev.name || 'Đợt không tên';
+    sel.appendChild(opt);
+  });
+}
+
+function addReminder(){
+  const eventId = document.getElementById('reminderEvent').value;
+  const timeStr = document.getElementById('reminderTime').value;
+  const note = document.getElementById('reminderNote').value.trim();
+  if(!eventId || !timeStr){
+    alert('Vui lòng chọn đợt và ngày giờ nhắc nhở');
+    return;
+  }
+  const time = new Date(timeStr).getTime();
+  if(isNaN(time) || time < Date.now()){
+    alert('Ngày giờ phải ở tương lai');
+    return;
+  }
+  reminders.push({
+    id: 'rem_' + Date.now(),
+    eventId,
+    time,
+    note,
+    done: false
+  });
+  saveReminders();
+  document.getElementById('reminderTime').value = '';
+  document.getElementById('reminderNote').value = '';
+  showToast('Đã thêm nhắc nhở');
+}
+
+function deleteReminder(id){
+  if(!confirm('Xóa nhắc nhở này?')) return;
+  reminders = reminders.filter(r => r.id !== id);
+  saveReminders();
+  showToast('Đã xóa nhắc nhở');
+}
+
+function markReminderDone(id){
+  const r = reminders.find(x => x.id === id);
+  if(!r) return;
+  r.done = true;
+  r.completedAt = Date.now();
+  r.completedAtStr = new Date().toLocaleString('vi-VN');
+
+  // Ghi vào lịch sử đợt (báo cáo)
+  const ev = events.find(e => e.id === r.eventId);
+  if(ev){
+    if(!ev.history) ev.history = '';
+    const line = `[${r.completedAtStr}] ✓ Hoàn thành nhắc nhở: ${r.note || '(không ghi chú)'} (đặt lúc ${new Date(r.time).toLocaleString('vi-VN')})`;
+    ev.history = ev.history ? ev.history + '\n' + line : line;
+  }
+
+  saveReminders();
+  saveAll();
+  renderEvents();
+  showToast('Đã ghi nhận hoàn thành vào báo cáo');
+}
+
+function renderReminders(){
+  const container = document.getElementById('reminderList');
+  if(!container) return;
+  if(reminders.length === 0){
+    container.innerHTML = '<small>Chưa có nhắc nhở nào</small>';
+    return;
+  }
+  // Sort by time
+  const sorted = [...reminders].sort((a,b) => a.time - b.time);
+  container.innerHTML = '';
+  sorted.forEach(r => {
+    const ev = events.find(e => e.id === r.eventId);
+    const timeStr = new Date(r.time).toLocaleString('vi-VN');
+    const div = document.createElement('div');
+    div.className = 'event-item';
+    div.style.background = r.done ? '#f0f0f0' : (r.time < Date.now() ? '#fff3cd' : '#f0f7ff');
+    div.innerHTML = `
+      <b>${escapeHtml(ev ? ev.name : 'Đợt đã xóa')}</b><br>
+      <small>⏰ ${timeStr}</small>
+      ${r.note ? `<br><small>📝 ${escapeHtml(r.note)}</small>` : ''}
+      ${r.done ? `<br><small style="color:green">✓ Đã xử lý lúc ${r.completedAtStr || ''}</small>` : ''}
+      <div class="row" style="margin-top:6px">
+        ${!r.done ? `<button class="success" onclick="markReminderDone('${r.id}')">✓ Đã gửi</button>` : ''}
+        <button class="danger" onclick="deleteReminder('${r.id}')">Xóa</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function requestNotificationPermission(){
+  if(!('Notification' in window)){
+    alert('Trình duyệt không hỗ trợ thông báo');
+    return;
+  }
+  Notification.requestPermission().then(p => {
+    const status = document.getElementById('notifStatus');
+    if(status) status.textContent = p === 'granted' ? '✅ Đã bật thông báo' : '❌ Chưa được phép thông báo';
+  });
+}
+
+function checkReminders(){
+  const now = Date.now();
+  reminders.forEach(r => {
+    if(r.done) return;
+    // Trigger if within last 2 minutes and not yet notified (simple flag)
+    if(r.time <= now && r.time > now - 120000 && !r._alerted){
+      r._alerted = true;
+      r.alertedAt = now;
+      r.alertedAtStr = new Date().toLocaleString('vi-VN');
+      const ev = events.find(e => e.id === r.eventId);
+      const msg = `Đến giờ gửi thông báo!\n${ev ? ev.name : ''}\n${r.note || ''}`;
+      showToast('⏰ ' + msg.replace(/\n/g, ' - '));
+      // Ghi vào lịch sử đợt
+      if(ev){
+        if(!ev.history) ev.history = '';
+        const line = `[${r.alertedAtStr}] ⏰ Đến giờ nhắc nhở: ${r.note || '(không ghi chú)'}`;
+        ev.history = ev.history ? ev.history + '\n' + line : line;
+      }
+      // Try browser notification
+      if(Notification.permission === 'granted'){
+        new Notification('Nhắc nhở cắt điện', { body: msg, icon: '⚡' });
+      }
+      // Simple beep using Web Audio
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.connect(g); g.connect(ctx.destination);
+        o.frequency.value = 880;
+        g.gain.setValueAtTime(0.3, ctx.currentTime);
+        o.start();
+        setTimeout(() => { o.stop(); ctx.close(); }, 600);
+      } catch(e){}
+      // Vibrate if supported
+      if(navigator.vibrate) navigator.vibrate([200,100,200]);
+      saveReminders();
+      saveAll();
+      renderEvents();
+    }
+  });
+}
+
+// Check every 30 seconds
+setInterval(checkReminders, 30000);
+
+// init
+if(events.length === 0){
+  createNewEvent();
+} else if(!currentEventId || !getCurrentEvent()){
+  currentEventId = events[0].id;
+}
+loadEventToForm();
+renderEvents();
+renderPhotos();
+renderList();
+setupExcelImport();
+updateReminderEventSelect();
+renderReminders();
+// Không tự động xin quyền thông báo khi mở app (chỉ khi người dùng bấm nút)
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('tab-' + tab);
+  if (panel) panel.classList.add('active');
+  // Find and activate the corresponding nav button
+  const buttons = document.querySelectorAll('.nav-btn');
+  buttons.forEach(btn => {
+    if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + tab + "'")) {
+      btn.classList.add('active');
+    }
+  });
+  // Scroll to top on tab switch
+  window.scrollTo(0, 0);
+}
+
+function showApp(){
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('mainApp').style.display = 'block';
+  if(userInfo){
+    document.getElementById('userDisplayName').textContent = userInfo.name + ' • ' + userInfo.phone;
+    document.getElementById('userDisplayTeam').textContent = userInfo.team;
+  }
+  loadEventToForm();
+  renderEvents();
+  renderPhotos();
+  renderList();
+}
+
+function showLogin(){
+  document.getElementById('loginScreen').style.display = 'block';
+  document.getElementById('mainApp').style.display = 'none';
+  if(userInfo){
+    document.getElementById('loginName').value = userInfo.name || '';
+    document.getElementById('loginTeam').value = userInfo.team || '';
+    document.getElementById('loginPhone').value = userInfo.phone || '';
+  }
+}
+
+function doLogin(){
+  const name = document.getElementById('loginName').value.trim();
+  const team = document.getElementById('loginTeam').value.trim();
+  const phone = document.getElementById('loginPhone').value.trim();
+  if(!name || !team || !phone){
+    alert('Vui lòng nhập đầy đủ tên, đội/phường và số điện thoại');
+    return;
+  }
+  userInfo = { name, team, phone };
+  localStorage.setItem('outageUser', JSON.stringify(userInfo));
+  showApp();
+}
+
+function logout(){
+  if(confirm('Đăng xuất?')){
+    localStorage.removeItem('outageUser');
+    userInfo = null;
+    showLogin();
+  }
+}
+
+if(userInfo && userInfo.name && userInfo.team && userInfo.phone){
+  showApp();
+} else {
+  showLogin();
+}
+</script>
+
+
+</body>
+</html>
